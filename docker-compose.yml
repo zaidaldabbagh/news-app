@@ -8,6 +8,10 @@ services:
     env_file: .env
     environment:
       - MYSQL_DATABASE=wordpress
+      - MYSQL_ROOT_PASSWORD=wp-news
+      - MYSQL_USER=wp-news
+      - MYSQL_PASSWORD=wp-news
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
     volumes: 
       - dbdata:/var/lib/mysql
       - ./db-startups:/docker-entrypoint-initdb.d
