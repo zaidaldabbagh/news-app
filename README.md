@@ -74,4 +74,4 @@ if you have a solid reason for them.
 
 Start the docker container (`docker-compose up -d`), and then use `npm run install` to make the `wp-cli` tool available in the docker containers.
 
-You can use it as `npm run wp <command>` - e.g `npm run wp user:list` is equivalent to `wp-cli user:list`
+You can use it as `npm run wp-cli <command>` - e.g `npm run wp-cli user list` is equivalent to `wp- user list`
