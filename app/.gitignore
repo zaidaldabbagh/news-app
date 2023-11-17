@@ -4,3 +4,5 @@
 /themes/simple/
 /_resources/
 /public/_resources/
+/.graphql-generated/
+/public/_graphql/

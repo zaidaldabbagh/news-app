@@ -3,21 +3,20 @@
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
     "require": {
-        "php": "^7.1 || ^8",
-        "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-cms": "~4.9.0@stable",
-        "silverstripe-themes/simple": "~3.2.0",
-        "silverstripe/login-forms": "~4.5.0@stable"
+        "php": "^8.1",
+        "silverstripe/recipe-plugin": "~2.0.0@stable",
+        "silverstripe/vendor-plugin": "~2.0.1@stable",
+        "silverstripe/recipe-cms": "~5.1.0@stable",
+        "silverstripe-themes/simple": "~3.3.0@stable",
+        "silverstripe/login-forms": "~5.1.0@stable"
     },
     "require-dev": {
-        "sminnee/phpunit": "^5.7",
-        "sminnee/phpunit-mock-objects": "^3.4.5"
+        "phpunit/phpunit": "^9.6"
     },
     "extra": {
-        "resources-dir": "_resources",
         "project-files-installed": [
+            ".htaccess",
             "app/.htaccess",
-            "app/_config.php",
             "app/_config/mimevalidator.yml",
             "app/_config/mysite.yml",
             "app/src/Page.php",
@@ -30,7 +29,12 @@
         ]
     },
     "config": {
-        "process-timeout": 600
+        "process-timeout": 600,
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/recipe-plugin": true,
+            "silverstripe/vendor-plugin": true
+        }
     },
     "prefer-stable": true,
     "minimum-stability": "dev"
