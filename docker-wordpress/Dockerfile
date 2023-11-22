@@ -1,4 +1,4 @@
-FROM wordpress:6.1.1-fpm-alpine
+FROM wordpress:6.4.1-fpm-alpine
 
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
