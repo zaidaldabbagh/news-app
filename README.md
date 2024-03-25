@@ -36,7 +36,7 @@ grouped by the Section of the Guardian the items are found in.
 
 ### Specifics
 
-- The application should be built as a WordPress plugin (the directory `wordpress/plugins` on this branch will correspond to `wp-content/plugins` in the runtime environment)
+- The application should be built as a Java Springboot application
   - The application should not call the Guardian API directly, rather
     we'd like to see you build your own API as a proxy for the
     Guardian one
@@ -72,6 +72,9 @@ if you have a solid reason for them.
 
 ## Getting started
 
-Start the docker container (`docker-compose up -d`), and then use `npm run install` to make the `wp-cli` tool available in the docker containers.
+You'll need JDK 17 and Maven installed to run this project.
 
-You can use it as `npm run wp <command>` - e.g `npm run wp user:list` is equivalent to `wp-cli user:list`
+A clean fork on this branch should be able to execute 
+`./mvnw spring-boot:run`
+
+The application will then serve on port 8080 and display "Greetings from Spring Boot!"
