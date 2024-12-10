@@ -1,5 +1,66 @@
 # News App
 
+## Developer Notes
+
+I followed the steps below to tackle this challenge:
+
+### Setup Steps
+
+Install app deps, client deps and server deps.
+```
+cd ~/Sites/news-app
+yarn install
+
+cd ~/Sites/news-app/client
+npm install
+
+cd ~/Sites/news-app/server
+npm install
+```
+
+### Run app
+```
+yarn dev
+```
+
+### Preview app
+http://localhost:5000/search
+
+***
+
+### Register Developer API Key
+
+Register for Developer API Key here:
+https://open-platform.theguardian.com/documentation/
+
+### Add API_KEY to .env
+
+Then add `API_KEY` to project .env
+cd ~/Sites/news-app/server
+cp .env.example .env
+
+```
+NODE_ENV=development
+GUARDIAN_API_KEY=myApiKey
+```
+
+### Update search.js to fetch news items
+Note: I had to downgrade to version 2, as the project uses CommonJS.
+```
+cd ~/Sites/news-app/server
+yarn add node-fetch@2
+```
+
+### Step — Update search.js to fetch news items from Guardian API
+* Fetch news items from Guardian API
+* Return JSON result items
+
+### Step — Handle search results
+* Handle search results
+* Handle pinned articles
+
+---
+
 ## Intro
 
 This code activity is a way for you to show us your development skills -
